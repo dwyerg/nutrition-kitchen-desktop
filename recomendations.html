@@ -4,9 +4,137 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" type="image/png" href="images/place_setting.png"/>
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <title>Product Recomendations</title>
 </head>
 <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <header>
+        <div id="title">
+            <img src="images/place_setting.png" alt="cartoon place setting">
+            <h1>Nutrition Kitchen</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li class="currPage"><a href="recomendations.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <h2 id="name">Nutritious Products</h2>
+    </header>
+    <main id="main">
+        <h2 class="recomendSections">Essential Spices</h2>
+        <div class="img_flex">
+            <!-- image attribution: https://live.staticflickr.com/65535/51158407687_126ed8b0e9_b.jpg -->
+            <img class="recomend" src="images/garlic_powder.jpeg" alt="Garlic and Garlic Powder">
+            <h3 id="garlic_powder">Garlic Powder</h3>
+            <p>
+                This makes a great addition to any spice cabinet. You can add it to 
+                anything and it saves you the hassle of having to mince garlic cloves 
+                up. Similarly, adding onion powder to you regular rotation would be 
+                an excellent idea as well. Both of these are staples in almost any 
+                dish.
+            </p>
+            <!-- image attribution: https://live.staticflickr.com/2732/4410692457_8395288a3c_b.jpg -->
+            <img class="recomend" src="images/cumin.jpeg" alt="Pile of Cumin">
+            <h3 id="cumin">Cumin</h3>
+            <p>
+                Cumin is one spice you never want to run out of. Although it is not 
+                commonly used for most people, we find that throwing it into most 
+                savory dishes really accentuates the other flavors of the dish and 
+                add a nice earthy overtone.
+            </p>
+            <!-- image attribution: https://live.staticflickr.com/65535/49560548743_84f7c9d233_b.jpg -->
+            <img class="recomend" src="images/nutmeg.jpeg" alt="Pile of Nutmeg">
+            <h3 id="nutmeg">Nutmeg</h3>
+            <p>
+                On the opposite end of the spectrum is nutmeg, which is more classically 
+                used in desserts or other sweet dishes. Add nutmeg to you oatmeal in 
+                the morning or simply spice up a batch of cookies for an extra hint 
+                of fall spices. Many people resort to cinnamon, but the flavor profile 
+                with both spices makes for a nice warm treat.
+            </p>
+        </div>
+        <h2 class="recomendSections">Necessary Basics</h2>
+        <div class="img_flex">
+            <!-- image attribution: https://p1.pxfuel.com/preview/482/339/705/fruit-bowl-fresh-banana-apricot-avocado.jpg -->
+            <img class="recomend" src="images/fruit.jpeg" alt="Bowl of Fruit and Avocados">
+            <h3 id="fruit">Fruit</h3>
+            <p>
+                As any health nut will tell you, fruit is an excellent snack. It is 
+                super low calorie and will satisfy any sweet tooth. We suggest you 
+                always keep a bowl of fruit on the counter (or in the refridgerator 
+                if you have fruit flies). You can populate it with apples, plums, 
+                bananas and our personal favorite, avocados.
+            </p>
+            <!-- image attribution: https://p0.pxfuel.com/preview/448/311/579/pasta-spiral-noodles-nutrition.jpg -->
+            <img class="recomend" src="images/pasta.jpeg" alt="Chickpea Pasta Noodles">
+            <h3>Pasta</h3>
+            <p>
+                Feeling like you don't have time to cook a complicated dish? Making 
+                any sort of pasta is easy and fast. We recomend protein pasta, such
+                as chickpea or lentil pasta, to boost the heartiness of the meal. You 
+                can use multiple kinds of sauces to garnish: marinara, alfredo, pesto, 
+                and so much more.
+            </p>
+            <!-- image attribution: https://live.staticflickr.com/4535/38692212662_3554097664_b.jpg -->
+            <img class="recomend" src="images/protein_powder.jpeg" alt="Green Protein Powder">
+            <h3>Protein Powder</h3>
+            <p>
+                In the morning, people often want a dish that is quick any easy to make. 
+                We often say that smoothies are the best bet, you can even prepare them 
+                the night before without much hassle. Throw in the fruit we mentioned 
+                earlier, along with a decent helping of protein powder and you have 
+                an extremely filling and healthy breakfast.
+            </p>
+        </div>
+        <h2 class="recomendSections">Fun Alternatives</h2>
+        <div class="img_flex">
+            <!-- image attribution: https://live.staticflickr.com/4769/26290159818_05a389ef5b_b.jpg -->
+            <img class="recomend" src="images/tofu.jpeg" alt="Cubed Seasoned Tofu">
+            <h3 id="tofu">Firm Tofu</h3>
+            <p>
+                If you have a little more flex in your budget, we suggest picking up 
+                a pack of firm tofu the next time you're at the grocery store. While 
+                it does have a large amount of soy, the protein content is very high 
+                as well. You can whip up tofu cubes easily in a well oiled plan or 
+                in a newfangled air fryer.
+            </p>
+            <!-- image attribution: https://p1.pxfuel.com/preview/604/180/1013/burger-cheeseburger-french-fries-food.jpg -->
+            <img class="recomend" src="images/burger.jpeg" alt="Burger and Fries">
+            <h3>Vegan Burger Patties</h3>
+            <p>
+                For those of you who prefer the meatier things in life, you can easily 
+                use beef patties as well. However, because we are keeping things as 
+                vegetarian, we bring up vege patties as an excellent alterantive. You 
+                don't even need to assmble a whole burger, just cut up the patty with 
+                some ketchup and chow down. Plus, they're delicious!
+            </p>
+            <!-- image attribution: https://cdn.pixabay.com/photo/2017/05/11/19/29/ice-2305144_1280.jpg -->
+            <img class="recomend" src="images/sorbet.jpeg" alt="Bowl of Vanilla Ice Cream and Raspberries">
+            <h3 id="vanilla">Ice Cream</h3>
+            <p>
+                We know that it can be hard to eat cleanly all of the time, which is 
+                why we are including ice cream on this list of products. Everything 
+                is okay in moderation. We suggest a small scoop of vanilla ice cream 
+                (non-dairy optional) with some blueberries or strawberries sprinkled 
+                on top. Yum!!
+            </p>
+        </div>
+    </main>
+    <footer>
+        <h3>Address: 1234 Home St, Ann Arbor MI, 48106</h3>
+        <h3>Email: nutrition_kitchen@info.com</h3>
+        <h3>Phone Number: 734-444-5566</h3>
+    </footer>
+
     
 </body>
 </html>

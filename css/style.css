@@ -1,0 +1,203 @@
+/* Color Scheme */
+p{
+    color: #943D3B;
+    color: #E07370;
+    color: #3897E0;
+    color: #5E7F99;
+}
+
+/* font */
+
+*{
+    font-family: 'Zen Kurenaido', sans-serif;;
+}
+
+/* logo, title and nav bar */
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img{
+    width: 20%;
+    height: 20%;
+}
+
+header h1{
+    padding-right: 5px;
+    font-size: 36px;
+}
+
+nav{
+    width: 100%;
+    text-align: center;
+}
+
+#title{
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul{
+    font-size: 24px;
+    background-color: #5e7f99a3;
+    padding: 10px;
+}
+
+.currPage{
+    border: solid 3px #5E7F99;
+    text-transform: uppercase;
+}
+
+a{
+    padding: 5px;
+}
+
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+}
+  
+.skip :focus{
+    position: absolute;
+    top: 0;
+}
+
+/* body */
+
+#name{
+    font-size: 40px;
+    margin: 10px;
+    text-decoration: underline dotted;
+}
+
+p{
+    color: #364958;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.recomend{
+    width: 300px;
+    height: 300px;
+    object-fit: scale-down;
+    border: 3px solid #943D3B;
+    background: #943c3b62;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.img_flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.recomendSections{
+    color: #943D3B;
+    font-size: 24px;
+    padding-top: 30px;
+    padding-left: 5px;
+}
+
+main h3{
+    color: #364958;
+    font-size: 20px;
+    padding: 10px;
+    width: 300px;
+}
+
+.img_flex p{
+    padding: 5px;
+    width: 300px;
+}
+
+.sections{
+    color: #943D3B;
+    font-size: 24px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.line{
+    width: 100%;
+    border-top: black solid 2px;
+}
+
+main ul{
+    color: #364958;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(30, auto);
+    grid-row-gap: 15px;
+}
+
+.img_grid{
+    grid-column: 1 / -1;
+    /* grid-row: 1 / 2; */
+}
+
+.recipes_grid{
+    grid-column: 1 / -1;
+    /* grid-row: 1 / 2; */
+}
+
+.prep_grid{
+    grid-column: 1 / 2;
+}
+
+.cook_grid{
+    grid-column: 3 / -1;
+}
+
+.ingredient_grid{
+    grid-column: 1 / -1;
+    padding-left: 50px;
+}
+
+.steps{
+    grid-column: 1 / -1;
+}
+
+
+/* footer */
+
+footer{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: #e07470f2;
+    padding: 10px;
+
+}
+
+/* screen size > 850px */
+
+@media only screen and (min-width: 850px){
+    header ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    footer{
+        justify-content: space-between;
+    }
+}
