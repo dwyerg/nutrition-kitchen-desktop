@@ -189,12 +189,10 @@ input[type=text], input[type=submit] {
     box-sizing: border-box;
   }
   
-  /* Add margins to the checkbox */
 input[type=checkbox] {
     margin-top: 16px;
   }
   
-  /* Style the submit button */
 input[type=submit] {
     background-color: #425a6d;
     color: white;
@@ -274,4 +272,9 @@ footer{
         flex-direction: row;
         justify-content: space-between;
     }
+}
+
+
+.lb-data .lb-caption {
+    font-size: 80px;
 }
