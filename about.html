@@ -36,14 +36,14 @@
                 <li class="currPage"><a href="about.html">About</a></li>
             </ul>
         </nav>
-        <h2 id="name">About Us</h2>
     </header>
     <main>
+        <h2 id="name" class="slide-forward">About Us</h2>
         <!-- image attribution: https://www.maxpixel.net/static/photo/1x/Kid-Child-People-Eating-Food-Cereal-Baby-Milk-2560321.jpg -->
         <img class="mobile_image" src="images/eating.jpeg" alt="A Child Eating Cereal">
         <div class="parallax_"></div>
-        <h2  id="main" class="sections line">Why Nutrition?</h2>
-            <p>
+        <h2 id="main" class="sections line">Why Nutrition?</h2>
+            <p class="cols">
                 We know how hard it can be to get started on a nutritious path, 
                 which is why we decided to develop this website full of 
                 resources that will aide in your transition to a healthier 
@@ -53,23 +53,46 @@
                 quite a lot to see and we don't want you to miss one bit of it.
             </p>
         <h2 class="sections line">Our Mission and Values</h2>
+            <div id="mv_flex">
+            
+            <div class="flip-card" tabindex="0">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+            <p class="mv">Mission</p>
+            </div>
+            <div class="flip-card-back">
             <p>
-                Mission: To simplify what it means to be healthy so this 
+                To simplify what it means to be healthy so this 
                 lifestyle can be accessible to more people. Many people grew 
                 up without little to no guidance when it comes to making 
                 healthy choices. They were victims of their circumstance and we 
                 want to rectify the overall situation.
             </p>
+            </div>
+            </div>
+            </div>
+
+            <div class="flip-card" tabindex="0">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+            <p class="mv">Values</p>
+            </div>
+            <div class="flip-card-back">
             <p>
-                Values: Unhealthy eating is systematic and problematic which 
+                Unhealthy eating is systematic and problematic which 
                 is why we are so passionate about the subject. For decades, 
                 people have resigned themsleves to eating fast food thinking it 
                 is the easiest and cheapest choice. And while they aren't 
                 entirely incorrect, switching to a healthier lifestyle doesn't 
                 necessarily mean a huge jump in the cost or accessiblity of food.
             </p>
+            </div>
+            </div>
+            </div>
+
+            </div>
         <h2 class="sections line">Our Founders</h2>
-            <p>
+            <p class="cols">
                 We have two main founders of the Nutrition Kitchen: the sisters 
                 Crystal and Diamond Johnson. They grew up in a small town in 
                 Michigan, eating mac and cheese on the daily. Once they moved 
@@ -83,20 +106,36 @@
             <form action="https://formspree.io/f/mayvwyvo" method="post">
             
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <input type="text" id="fname" name="firstname" placeholder="Your name..." required>
 
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            
-                <!-- <label for="country">Country</label>
-                <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-                </select> -->
-                <br>
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="john@example.com" required>
+                
+                <h2>What is your reason for contacting us?</h2>
+                <div id="form_flex">
+                <label class="contained">Recipe Recomendation
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                  
+                <label class="contained">Sample Shopping List
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                  
+                <label class="contained">Tech Support
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                  
+                <label class="contained">Help
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                </div>
             
                 <input type="submit" value="Submit">
             

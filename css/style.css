@@ -25,17 +25,14 @@ header img{
     height: 20%;
 }
 
-header h1{
-    padding-right: 5px;
-    font-size: 36px;
-}
-
 nav{
     width: 100%;
     text-align: center;
 }
 
 #title{
+    padding-right: 5px;
+    font-size: 36px;
     display: flex;
     justify-content: space-between;
 }
@@ -76,6 +73,7 @@ a{
 #name{
     font-size: 40px;
     margin: 10px;
+    text-align: center;
     text-decoration: underline dotted;
 }
 
@@ -149,16 +147,14 @@ main ul{
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 15px;
+}
+
+.name_grid, .recipes_grid, .img_grid, .steps, .ingredient_grid{
+    grid-column: 1 / -1;
 }
 
 .img_grid{
     width: 100%;
-    grid-column: 1 / -1;
-}
-
-.recipes_grid{
-    grid-column: 1 / -1;
 }
 
 .prep_grid{
@@ -170,44 +166,119 @@ main ul{
 }
 
 .ingredient_grid{
-    grid-column: 1 / -1;
     padding-left: 50px;
-}
-
-.steps{
-    grid-column: 1 / -1;
 }
 
 /* FORM STYLING */
   
-.containers {
+.containers{
     padding: 20px;
-    background-color: #f1f1f1;
-  }
+    background-color: #7788994c;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    font-size: 22px;
+}
   
-input[type=text], input[type=submit] {
+input[type=text], input[type=submit]{
     width: 100%;
     padding: 12px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-  }
+}
   
-input[type=checkbox] {
-    margin-top: 16px;
-  }
-  
-input[type=submit] {
+input[type=submit]{
     background-color: #425a6d;
     color: white;
     border: none;
-  }
+    border-radius: 50px;
+}
   
-input[type=submit]:hover {
+input[type=submit]:hover{
     opacity: 0.8;
-    border-radius: 10px;
-  }
+}
+
+#form_flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.contained{
+    font-size: 24px;
+    padding: 20px;
+    margin: 5px;
+    background-color: #7788994c;
+}
+
+/* flip card */
+
+.flip-card{
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+  
+.flip-card-front {
+    background-color: #5E7F99;
+    color: black;
+}
+  
+.flip-card-back {
+    border: 3px solid #5E7F99;
+    background-color: white;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.mv{
+    padding-top: 50px;
+    font-size: 48px;
+    color: black;
+}
+
+#mv_flex{
+    display: flex;
+    flex-direction: column;
+}
+
+/* animation */
+
+.slide-forward{
+    animation-name: slide-forward;
+    animation-duration: 5s;
+}
 
 /* footer */
 
@@ -217,9 +288,9 @@ footer{
     align-items: flex-end;
     background: #e07470f2;
     padding: 10px;
-}
+}  
 
-/* screen size > 850px */
+/* screen size > 700px */
 
 @media only screen and (min-width: 700px){
 
@@ -233,12 +304,7 @@ footer{
         justify-content: space-evenly;
     }
 
-    header li::before{
-        font-size: 28px;
-        content: "/";
-    }
-
-    header li::after{
+    header li::before, header li::after{
         font-size: 28px;
         content: "/";
     }
@@ -248,13 +314,8 @@ footer{
     }
 
     .parallax {
-        /* The image used */
         background-image: url("../images/cropped_kitchen.jpg");
-      
-        /* Set a specific height */
         min-height: 300px;
-      
-        /* Create the parallax scrolling effect */
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -262,13 +323,8 @@ footer{
       }
     
     .parallax_ {
-        /* The image used */
         background-image: url("../images/eating.jpeg");
-      
-        /* Set a specific height */
         min-height: 300px;
-      
-        /* Create the parallax scrolling effect */
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -280,27 +336,16 @@ footer{
     }
     
     .recipes_grid{
-        grid-column: 1 / 4;
         font-size: 36px;
-        background-color: #943D3B;
-        color: white;
     }
     
-    .prep_grid{
-        padding-top: 40px;
-        grid-column: 5 / 6;
-    }
-    
-    .cook_grid{
-        padding-top: 40px;
-        grid-column: 6 / 7;
-    }
-    
-    .ingredient_grid{
+    .recipes_grid, .prep_grid, .cook_grid, .ingredient_grid{
+        text-align: center;
         grid-column: 1 / 4;
-        grid-row: span 4;
+        padding-left: 0px;
+        background-color: #7788994c;
     }
-    
+
     .steps{
         grid-column: 4 / -1;
     }
@@ -313,6 +358,157 @@ footer{
         flex-direction: row;
         justify-content: space-between;
     }
+
+    .containers{
+        margin: 50px;
+    }
+
+    #mv_flex{
+        flex-direction: row;
+    }
+
 }
 
+/* screen size > 1040px */
+
+@media only screen and (min-width: 1040px){
+
+    header{
+        flex-direction: row;
+        background-color: #5e7f9986;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    header h1{
+        padding-top: 0px;
+        padding-right: 50px;
+    }
+
+    header ul{
+        background-color: #5e7f9900;
+    }
+
+    #title{
+        padding-left: 20px;
+    }
+
+    #intro_grid{
+        display: grid;
+        grid-template-columns: 5% 20% auto 20% 5%;
+    }
+
+    #index p{
+        margin: 20px;
+        background-color: #7788994c;
+        text-align: justify;
+    }
+
+    #intro_grid p:nth-child(odd){
+        grid-column: 2 / 4;
+    }
+
+    #intro_grid p:nth-child(even){
+        grid-column: 3 / 5;
+    }
+
+    .sections{
+        margin-top: 10px;
+        padding: 20px;
+        background-color: #943D3B;
+        color: #ffffff;
+    }
+
+    .ingredient_grid{
+        padding-top: 40px;
+        background-color: #77889900;
+    }
+
+    .prep_grid{
+        padding-top: 40px;
+        grid-column: 5 / 6;
+        background-color: #77889900;
+    }
+    
+    .cook_grid{
+        padding-top: 40px;
+        grid-column: 6 / 7;
+        background-color: #77889900;
+    }
+
+    .img_flex{
+        flex-direction: column;
+        align-items: center;
+        max-height: 700px;
+    }
+
+    .recomendSections{
+        background-color: #5E7F99;
+        color: #ffffff;
+        padding: 0px;
+        padding-left: 20px;
+        font-size: 36px;
+    }
+
+    .img_flex p{
+        margin-top: 0;
+    }
+
+    .line{
+        color: #943D3B;
+        background-color: #ffffff;
+    }
+
+    .cols{
+        margin-left: 200px;
+        margin-right: 200px;
+        columns: 2;
+    }
+
+    .mv{
+        padding: 20px;
+    }
+
+    #form_flex{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .containers{
+        box-shadow: 10px 10px #000000bd;
+    }
+    
+}
+
+/* keyframes animation */
+
+@keyframes slide-forward{
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+/* prefers reduce motion */
+
+@media (prefers-reduced-motion) {
+
+    .flip-card-inner{
+        transition: transform 0s;
+    }
+
+    .slide-forward{
+      animation-duration: 0s;
+    }
+
+    .parallax, .parallax_ {
+        background-attachment: scroll;
+    }
+    
+}
 
