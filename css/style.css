@@ -56,7 +56,6 @@ a{
     background: white;
     left: 0;
     padding: 6px;
-    -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
     z-index: 1;
     position: absolute;
@@ -252,20 +251,21 @@ input[type=submit]:hover{
   
 .flip-card-front {
     background-color: #5E7F99;
-    color: black;
+    color: #000000;
 }
   
 .flip-card-back {
     border: 3px solid #5E7F99;
-    background-color: white;
-    color: white;
+    background-color: #ffffff;
+    color: #000000;
     transform: rotateY(180deg);
 }
 
 .mv{
     padding-top: 50px;
     font-size: 48px;
-    color: black;
+    color: #000000;
+    text-shadow: #ffffff;
 }
 
 #mv_flex{
@@ -497,6 +497,10 @@ footer{
 /* prefers reduce motion */
 
 @media (prefers-reduced-motion) {
+
+    .skip a{
+        transition: 0s;
+    }
 
     .flip-card-inner{
         transition: transform 0s;
